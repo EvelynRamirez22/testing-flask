@@ -59,7 +59,7 @@ def register():
         if not username:
             error = "Se requiere nombre de usuario."
         elif not password:
-            error = "Se requiere contraseña."
+            error = "Se requiere la contraseña."
 
         if error is None:
             try:
@@ -94,7 +94,7 @@ def login():
         ).fetchone()
 
         if (user is None) or (not check_password_hash(user["password"], password)):
-            error = "Incorrect username or password."
+            error = "Contraseña o usuario incorrecto."
     
 
         if error is None:
